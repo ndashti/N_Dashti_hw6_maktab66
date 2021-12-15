@@ -1,0 +1,231 @@
+@font-face {
+    font-family: "Raleway";
+    src: url(../font/Raleway-Regular.ttf);
+}
+@font-face {
+    font-family: "Raleway-heavy";
+    src: url(../font/Raleway-SemiBold.ttf);
+}
+@font-face {
+    font-family: "Raleway-thin";
+    src: url(../font/Raleway-Thin.ttf);
+}
+/* --------------------------------------------------------------- */
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body{
+    font-family: Raleway,sans-serif;
+    background-color: #f1f1f1;
+    width: 100vw;
+    overflow-x: hidden;
+    line-height: 1.5;
+}
+img{
+    width: 100%;
+}
+.shadow-box{
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.1);
+    justify-content: space-around;
+    margin-bottom: 35px;
+}
+.contain{
+    padding: 3%;
+}
+
+.head-box{
+    font-family: Raleway-thin;
+    background-color: #f1f1f1;
+    padding: 5%;
+}
+.alert-text{
+    color: white;
+    background-color: black;
+    padding: .1% .9%;
+}
+
+.btn-white{
+    padding: 12px 24px;
+    border: 1px solid #ccc;
+    background-color: white;
+    font-family: Raleway-heavy;
+    
+}
+h3{
+    font-size: 1.5rem;
+}
+h4{
+    font-size: 1.3rem;
+}
+h5{
+    font-family: Raleway-thin;
+    font-size: 1.2rem;
+}
+/* ----------------------------Header----------------------------- */
+header{
+    font-size: 1.1rem;
+    text-align: center;
+    padding-top: 30px;
+    padding-top: 30px;
+}
+.header-name{
+    background-color: black;
+    color: white;
+}
+header h1{
+    font-family: "Raleway-heavy";
+    line-height: 80px;
+}
+
+/* -------------------------Main-------------------------------- */
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin:3%;
+}
+
+/* ------------------------Popular------------------------------------ */
+.side{
+    flex-basis: 30%;
+
+}
+
+ul img {
+    width: 40px;
+    height: 40px;
+}
+
+.popular ul{
+    list-style-type: none;
+}
+.text-li{
+    display: grid;
+    margin-left: 10px
+}
+.sub-title{
+    font-size: .9rem;
+}
+.contain-li li{
+    display: flex;
+    padding: 15px;
+    border-top:1px solid  #ccc;
+}
+.contain-li li:first-child{
+    border: none;
+}
+.contain-li li:hover{
+    background-color: #ccc;
+}
+/* ------------------------Tag----------------------------------- */
+.tag-key span{
+    padding: 1px 8px;
+    background-color: #f1f1f1;
+    font-size: .7em;
+    line-height: 2rem;
+}
+.tag-key span:first-child{
+    font-size: .9em;
+    color: white;
+    background-color: black;
+    padding: 1px 8px;
+}
+/* ------------------------Post----------------------------------- */
+.post{
+    flex-basis: 60%;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    margin-top:25px ;
+}
+.count{
+    padding:0 10px;
+    margin: 0 10px;
+}
+.count[data-value ="2"]{
+    border-radius: 50%;
+}
+.date{
+    color: #616161;
+}
+.contain p{
+    margin-top: 20px;
+}
+.bottom-post{
+    display: flex;
+    justify-content: space-between;
+    margin-top:25px ;
+    align-items: center;
+}
+.comment-post{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* ---------------------------------------------------------------- */
+footer{
+    height: 100px;
+    background-color: #616161;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+footer span{
+    color: white;
+}
+footer a:link{
+    color: white;
+}
+.btn-white:hover,.btn-black:hover{
+    background-color: #ccc;
+    cursor: pointer;
+}
+.btn-black{
+    padding: 15px 24px;
+    margin: 10px 0 10px 0;
+    border: none;
+    background-color: #000;
+    color: white;
+    font-family: Raleway-heavy;
+}
+
+.btn-black-visible{
+    padding: 15px 24px;
+    margin: 10px 0 10px 0;
+    border: none;
+    background-color: rgb(54, 54, 54);
+    color: rgb(175, 173, 173);
+    font-family: Raleway-heavy;
+}
+.btn-black-visible:hover{
+    pointer-events: visible;
+    background-color: rgb(95, 86, 86);
+    cursor: not-allowed;
+
+}
+/* ****************Mobile breakPoint************************* */
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+  }
+@media screen and (max-width: 600px) {
+    main {
+        flex-direction: column;
+    }
+    .comment-post{
+        display: none;
+    }
+  }
+/* @media only screen and (min-width: 1200px){
+    main{
+        flex-direction: row;
+    }
+} */
